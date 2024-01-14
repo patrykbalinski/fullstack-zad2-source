@@ -53,7 +53,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
         with:
-          repository: patrykbalinski/lab10_config
+          repository: patrykbalinski/fullstack-zad2-config
           token: ${{ secrets.FULLSTACK_TOKEN }}
       - run: |
           sed -i 's/sweaze\/lab10-app:.*/sweaze\/lab10-app:${{ needs.dockerCI.outputs.version_number }}/g' lab10-deployment.yaml
